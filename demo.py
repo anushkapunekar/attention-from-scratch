@@ -11,7 +11,11 @@ attention = SelfAttention(embed_dim=4)
 # print("Q shape:", Q.shape) 
 # print("K shape:", K.shape) 
 # print("V shape:", V.shape) 
-scores = attention(x)
+# 
+weights = attention(x)
 
-print("Attention scores shape:" , scores.shape)
-print(scores)
+print("Attention weights shape:",weights.shape)
+print(weights)
+
+#check: rows should sum to 1 (softmax)
+print("Row sums:", weights.sum(dim=-1))

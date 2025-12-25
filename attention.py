@@ -18,6 +18,14 @@ class SelfAttention(nn.Module):
         Q = self.W_q(x)    #take input words vectors and convert them into queries
         K = self.W_k(x)    #into keys
         V = self.W_v(x)    #into values
-
+    
+    #raw attention
         scores = torch.matmul(Q,K.transpose(-2,-1))
-        return scores
+
+        #scaling the scores
+        scale =math.sqrt(self.embed_dim)
+        scores=scores/scale   #reduces magnitude, stabilizes learning as told in paper
+
+        #softmax to get attention weights
+        attention_weights = torch.softmax(scores, dim=-1) # applies softmax row-wise, 
+        return attention_weights
