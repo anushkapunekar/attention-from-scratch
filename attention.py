@@ -28,4 +28,11 @@ class SelfAttention(nn.Module):
 
         #softmax to get attention weights
         attention_weights = torch.softmax(scores, dim=-1) # applies softmax row-wise, 
-        return attention_weights
+        
+        #apply attention to values
+        output = torch.matmul(attention_weights, V)
+
+
+        #output=> new word representations ,,, and attention_weights=> for inspection/visualisation    
+        return output, attention_weights  
+    
