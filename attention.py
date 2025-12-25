@@ -24,7 +24,7 @@ class SelfAttention(nn.Module):
 
         #scaling the scores
         scale =math.sqrt(self.embed_dim)
-        scores=scores/scale   #reduces magnitude, stabilizes learning as told in paper
+        scores=scores/scale  #reduces magnitude, stabilizes learning as told in paper
 
         #softmax to get attention weights
         attention_weights = torch.softmax(scores, dim=-1) # applies softmax row-wise, 

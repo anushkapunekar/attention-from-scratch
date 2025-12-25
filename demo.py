@@ -17,5 +17,5 @@ weights = attention(x)
 print("Attention weights shape:",weights.shape)
 print(weights)
 
-#check: rows should sum to 1 (softmax)
+#check sanity : rows should sum to 1 (softmax)
 print("Row sums:", weights.sum(dim=-1))
