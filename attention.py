@@ -14,7 +14,10 @@ class SelfAttention(nn.Module):
         self.W_v = nn.Linear(embed_dim, embed_dim)
 
     def forward(self, x):
-        """
-        x: (batch_size, seq_len, embed_dim)
-        """
-        pass
+       
+        Q = self.W_q(x)    #take input words vectors and convert them into queries
+        K = self.W_k(x)    #into keys
+        V = self.W_v(x)    #into values
+
+        scores = torch.matmul(Q,K.transpose(-2,-1))
+        return scores
