@@ -107,13 +107,13 @@ Attention weights shape: torch.Size([1, 2, 3, 3])
 
 📌 Key Takeaways:
 
-Self-attention allows each word to dynamically decide which other words matter
-Multi-head attention enables multiple perspectives over the same input
-This mechanism is the foundation of all modern LLMs
-Understanding attention deeply is crucial for working with:
-1.Transformers
-2.RAG systems
-3.LLM-based agents
+*Self-attention allows each word to dynamically decide which other words matter.
+*Multi-head attention enables multiple perspectives over the same input.
+*This mechanism is the foundation of all modern LLMs.
+*Understanding attention deeply is crucial for working with:
+1.Transformers.
+2.RAG systems.
+3.LLM-based agents.
 
 ---
 
