@@ -85,7 +85,8 @@ attention-from-scratch/
 ```
 ---
 
-▶️ How to Run
+▶️ How to Run:
+
 1️⃣ Install dependencies
 pip install -r requirements.txt
 
@@ -104,7 +105,8 @@ Attention weights shape: torch.Size([1, 2, 3, 3])
 
 ---
 
-📌 Key Takeaways
+📌 Key Takeaways:
+
 Self-attention allows each word to dynamically decide which other words matter
 Multi-head attention enables multiple perspectives over the same input
 This mechanism is the foundation of all modern LLMs
@@ -115,10 +117,12 @@ Understanding attention deeply is crucial for working with:
 
 ---
 
-📚 Reference
+📚 Reference: 
+
 Vaswani et al., Attention Is All You Need, NeurIPS 2017
 
 ---
 
-✨ Final Note
+✨ Final Note: 
+
 This project focuses on clarity and understanding, not scale. It is intended as a learning-oriented, foundational implementation that bridges research papers and real-world Transformer-based systems.
