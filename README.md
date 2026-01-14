@@ -4,7 +4,7 @@ This project is a from-scratch implementation of Self-Attention and Multi-Head S
 
 The goal of this project is to understand and implement the core mechanism behind modern language models such as ChatGPT, BERT, and other Transformer-based systems — without training large models or using datasets.
 
-### 🚀 What This Project Covers
+###  What This Project Covers
 This repository implements:
 * ✅ **Single-Head Self-Attention**
 * ✅ **Multi-Head Self-Attention**
@@ -19,7 +19,7 @@ This keeps the focus purely on understanding how attention works.
 
 ---
 
-### 🧩 Why Attention?
+###  Why Attention?
 Before Transformers, sequence models like RNNs and LSTMs processed text one word at a time, which made them:
 * **slow**
 * **hard to parallelize**
@@ -29,7 +29,7 @@ The Transformer introduced self-attention, allowing every word to look at every 
 
 ---
 
-### 🧠 Core Idea: Self-Attention
+###  Core Idea: Self-Attention
 For a given input sentence represented as embeddings:
 Each word is projected into:
 * **Query (Q)** – what the word is looking for
@@ -43,7 +43,7 @@ These scores are used to mix values (V), producing context-aware word representa
 
 ---
 
-### 🔹 Single-Head Self-Attention
+### Single-Head Self-Attention
 The `SelfAttention` class implements one attention head, which demonstrates the core mechanism from the paper.
 
 **Input** `(batch_size, sequence_length, embedding_dim)`
@@ -56,7 +56,7 @@ This version is useful for:
 
 ---
 
-### 🔹 Multi-Head Self-Attention
+###  Multi-Head Self-Attention
 The `MultiHeadSelfAttention` class extends the single-head version. Instead of one attention mechanism, it uses multiple attention heads in parallel, where each head:
 1. attends to the sentence independently
 2. focuses on different representation subspaces
@@ -73,7 +73,7 @@ This is one of the key reasons Transformers scale so well.
 
 ---
 
-### 🗂️ Project Structure
+###  Project Structure
 ```text
 attention-from-scratch/
 │
@@ -117,12 +117,12 @@ Attention weights shape: torch.Size([1, 2, 3, 3])
 
 ---
 
-📚 Reference: 
+ Reference: 
 
 Vaswani et al., Attention Is All You Need, NeurIPS 2017
 
 ---
 
-✨ Final Note: 
+ Final Note: 
 
 This project focuses on clarity and understanding, not scale. It is intended as a learning-oriented, foundational implementation that bridges research papers and real-world Transformer-based systems.
